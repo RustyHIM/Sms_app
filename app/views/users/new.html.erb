@@ -1,0 +1,15 @@
+<h1>Send the <a href="https://twitter.com/lokalty">Lokalty</a> download link to my phone</h1>
+<%= form_for @user do |f| %>
+<% if @user.errors.any? %>
+<ul>
+<% @user.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
+
+<p><%= f.label :phone %><br>
+<%= f.text_field :phone %></p>
+
+<%= f.submit "SEND"%>
+<% end %>
